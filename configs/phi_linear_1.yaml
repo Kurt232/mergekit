@@ -1,0 +1,11 @@
+dtype: float16
+merge_method: linear
+models:
+- model: ./models/R-Phi4
+  parameters:
+    weight: 0.1
+- model: ./models/I-Phi4
+  parameters:
+    weight: 0.9
+tokenizer:
+  source: ./models/I-Phi4

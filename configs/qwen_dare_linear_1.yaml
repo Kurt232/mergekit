@@ -1,0 +1,13 @@
+base_model: ./models/I-Qwen2.5-14B
+dtype: float16
+merge_method: dare_linear
+models:
+- model: ./models/R1-Qwen2.5-14B
+  parameters:
+    density: 0.1
+    weight: 1.0
+parameters:
+  int8_mask: true
+  normalize: true
+tokenizer:
+  source: base

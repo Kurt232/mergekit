@@ -1,0 +1,13 @@
+models:
+  - model: ./models/R1-Llama3-8B
+    parameters:
+      weight: 1.0
+      density: 0.1
+merge_method: dare_linear
+base_model: ./models/I-Llama3-8B
+tokenizer:
+  source: base
+parameters:
+  int8_mask: true
+  normalize: true
+dtype: float16

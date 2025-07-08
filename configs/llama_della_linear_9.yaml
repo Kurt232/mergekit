@@ -1,0 +1,15 @@
+base_model: ./models/I-Llama3-8B
+dtype: float16
+merge_method: della_linear
+models:
+- model: ./models/R1-Llama3-8B
+  parameters:
+    density: 0.9
+    weight: 1.0
+parameters:
+  epsilon: 0.05
+  int8_mask: true
+  lambda: 1.1
+  normalize: true
+tokenizer:
+  source: base

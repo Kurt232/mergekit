@@ -1,0 +1,15 @@
+base_model: ./models/I-Phi4
+dtype: float16
+merge_method: della_linear
+models:
+- model: ./models/R-Phi4
+  parameters:
+    density: 0.5
+    weight: 1.0
+parameters:
+  epsilon: 0.2
+  int8_mask: true
+  lambda: 1.1
+  normalize: true
+tokenizer:
+  source: base
