@@ -8,4 +8,4 @@ models:
   parameters:
     weight: 0.1
 tokenizer:
-  source: ./models/I-Qwen2.5-14B
+  source: ./models/R1-Qwen2.5-14B

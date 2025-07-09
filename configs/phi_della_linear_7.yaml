@@ -12,4 +12,4 @@ parameters:
   lambda: 1.1
   normalize: true
 tokenizer:
-  source: base
+  source: ./models/R-Phi4

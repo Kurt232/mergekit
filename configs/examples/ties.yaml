@@ -4,9 +4,9 @@ models:
       weight: 1.0
       density: 0.1
 merge_method: ties
-base_model: ./models/I-Llama3-8B
+base_model: ./models/Llama3-8B
 tokenizer:
-  source: base
+  source: ./models/R1-Llama3-8B
 parameters:
   int8_mask: true
   normalize: true

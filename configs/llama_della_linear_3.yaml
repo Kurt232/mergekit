@@ -1,4 +1,4 @@
-base_model: ./models/I-Llama3-8B
+base_model: ./models/Llama3-8B
 dtype: float16
 merge_method: della_linear
 models:
@@ -12,4 +12,4 @@ parameters:
   lambda: 1.1
   normalize: true
 tokenizer:
-  source: base
+  source: ./models/R1-Llama3-8B

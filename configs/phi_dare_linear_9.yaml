@@ -10,4 +10,4 @@ parameters:
   int8_mask: true
   normalize: true
 tokenizer:
-  source: base
+  source: ./models/R-Phi4

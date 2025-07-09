@@ -20,18 +20,42 @@ process_configs() {
         local CONFIG=${CONFIGS[$i]}
         local NAME=$(basename "$CONFIG" .yaml)
 
+        if [[ $NAME == qwen_dare_linear* ]]; then
+            echo "Processing $NAME on GPU $gpu"
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_qwen/$NAME" --cuda
+        fi
+        if [[ $NAME == qwen_linear* ]]; then
+            echo "Processing $NAME on GPU $gpu"
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_qwen/$NAME" --cuda
+        fi
+        if [[ $NAME == qwen_ties* ]]; then
+            echo "Processing $NAME on GPU $gpu"
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_qwen/$NAME" --cuda
+        fi
         if [[ $NAME == llama_dare_linear* ]]; then
             echo "Processing $NAME on GPU $gpu"
-            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merged2/$NAME" --cuda
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_llama/$NAME" --cuda
         fi
         if [[ $NAME == llama_linear* ]]; then
             echo "Processing $NAME on GPU $gpu"
-            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merged2/$NAME" --cuda
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_llama/$NAME" --cuda
         fi
         if [[ $NAME == llama_ties* ]]; then
             echo "Processing $NAME on GPU $gpu"
-            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merged2/$NAME" --cuda
+            CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge_llama/$NAME" --cuda
         fi
+        # if [[ $NAME == phi_dare_linear* ]]; then
+        #     echo "Processing $NAME on GPU $gpu"
+        #     CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge1/$NAME" --cuda
+        # fi
+        # if [[ $NAME == phi_linear* ]]; then
+        #     echo "Processing $NAME on GPU $gpu"
+        #     CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge1/$NAME" --cuda
+        # fi
+        # if [[ $NAME == phi_ties* ]]; then
+        #     echo "Processing $NAME on GPU $gpu"
+        #     CUDA_VISIBLE_DEVICES=$gpu mergekit-yaml "$CONFIG" "./merge1/$NAME" --cuda
+        # fi
     done
 }
 

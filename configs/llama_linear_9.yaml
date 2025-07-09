@@ -8,4 +8,4 @@ models:
   parameters:
     weight: 0.1
 tokenizer:
-  source: ./models/I-Llama3-8B
+  source: ./models/R1-Llama3-8B

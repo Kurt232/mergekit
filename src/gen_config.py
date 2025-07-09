@@ -51,6 +51,6 @@ for f in llama_configs:
 for f in llama_configs:
     p = os.path.join('configs', f)
     text = open(p, 'r').read()
-    text = text.replace('I-Llama3-8B', 'I-Phi4')
-    text = text.replace('R1-Llama3-8B', 'R-Phi4')
+    text = text.replace('Llama3-8B', 'I-Phi4')
+    text = text.replace('R1-I-Phi4', 'R-Phi4')
     open(p.replace('llama', 'phi'), 'w').write(text)

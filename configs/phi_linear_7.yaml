@@ -4,8 +4,8 @@ models:
 - model: ./models/R-Phi4
   parameters:
     weight: 0.7
-- model: ./models/I-Phi4
+- model: ./models/I-I-Phi4
   parameters:
     weight: 0.3
 tokenizer:
-  source: ./models/I-Phi4
+  source: ./models/R-Phi4
