@@ -12,3 +12,4 @@ parameters:
   int8_mask: true
   normalize: true
 dtype: float16
+chat_template: null

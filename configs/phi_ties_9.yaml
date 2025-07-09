@@ -1,4 +1,5 @@
 base_model: ./models/I-Phi4
+chat_template: null
 dtype: float16
 merge_method: ties
 models:

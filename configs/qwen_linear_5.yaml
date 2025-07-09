@@ -1,10 +1,11 @@
+chat_template: null
 dtype: float16
 merge_method: linear
 models:
 - model: ./models/R1-Qwen2.5-14B
   parameters:
     weight: 0.5
-- model: ./models/I-Qwen2.5-14B
+- model: ./models/Qwen2.5-14B
   parameters:
     weight: 0.5
 tokenizer:

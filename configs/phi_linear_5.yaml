@@ -1,10 +1,11 @@
+chat_template: null
 dtype: float16
 merge_method: linear
 models:
 - model: ./models/R-Phi4
   parameters:
     weight: 0.5
-- model: ./models/I-I-Phi4
+- model: ./models/I-Phi4
   parameters:
     weight: 0.5
 tokenizer:

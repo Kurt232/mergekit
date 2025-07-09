@@ -1,4 +1,5 @@
 base_model: ./models/Llama3-8B
+chat_template: null
 dtype: float16
 merge_method: della_linear
 models:

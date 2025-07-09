@@ -13,3 +13,4 @@ parameters:
   lambda: 1.1
   epsilon: 0.05
 dtype: float16
+chat_template: null

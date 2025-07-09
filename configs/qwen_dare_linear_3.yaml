@@ -1,4 +1,5 @@
 base_model: ./models/Qwen2.5-14B
+chat_template: null
 dtype: float16
 merge_method: dare_linear
 models:
